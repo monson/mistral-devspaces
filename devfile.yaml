@@ -28,9 +28,14 @@ components:
       volumeMounts:
         - name: venv
           path: /home/user/.venv
+        - name: projects
+          path: /projects
   - name: venv
     volume:
       size: 1G
+  - name: projects
+    volume:
+      size: 120G
 #commands:
 #  - exec:
 #      commandLine: python -m venv .venv && . .venv/bin/activate && pip install pip -U && pip install -r requirements.txt
